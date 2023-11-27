@@ -9,7 +9,11 @@ def get_population():
 PopulationList = List[Dict[str, int]]
 PopulationFunction = Callable[[PopulationList, str], PopulationList]
 
-def population_by_country(data: PopulationList, country: str) -> PopulationList:
+# country can be undefined
+#
+
+def population_by_country(data: PopulationList, country: str = None ) -> PopulationList:
+  country : str = input("Enter a country: ")
   result = list(filter(lambda x : x['country'] == country, data))
   return result
 
@@ -29,9 +33,6 @@ countries = [
 ]
 # types for population_by_country and country
 
-country : str = input("Enter a country: ")
 
-
-print(population_by_country(countries, country))
 
 
