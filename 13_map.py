@@ -55,3 +55,17 @@ print( list(prices))
 print( new_items )
 
 print(items)
+
+# map with two iterables
+
+numbers = [1, 2, 3, 4]
+
+def double(x, y):
+    return x * y
+
+doubled = map(double, numbers, numbers)
+
+print(list(doubled))
+
+names = {'Nicolas', 'Miguel', 'Juan', 'Nicolas'} 
+print( len(names) ) 
